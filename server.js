@@ -18,8 +18,6 @@ const PORT = process.env.PORT || 5001;
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
       dbName: "blogDB", // Ensure you're using the correct database
     });
     console.log("✅ MongoDB Connected Successfully");
